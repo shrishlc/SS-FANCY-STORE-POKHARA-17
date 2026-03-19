@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS FANCY STORE | POKHARA ELITE</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+        :root { --neon: #ffffff; --bg: #080808; --accent: #444; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: white; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+        /* Smooth Floating Header */
+        nav {
+            position: fixed; top: 0; width: 100%; padding: 20px 5%;
+            display: flex; justify-content: space-between; z-index: 1000;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+        }
+        .logo { font-family: 'Syncopate', sans-serif; font-size: 1rem; letter-spacing: 3px; border-left: 3px solid white; padding-left: 10px; }
+
+        /* Full Body Hero Section */
+        .hero {
+            height: 100vh; width: 100%; display: flex; align-items: center; justify-content: flex-start;
+            position: relative; padding-left: 8%; overflow: hidden;
+        }
+        .hero-text { z-index: 5; position: relative; }
+        .hero-text h1 { font-family: 'Syncopate', sans-serif; font-size: clamp(2.5rem, 10vw, 8rem); line-height: 0.9; margin-bottom: 15px; }
+        .hero-text p { font-size: 0.9rem; letter-spacing: 5px; color: #888; text-transform: uppercase; }
+        
+        /* The "Model" image - replaces the shoe with a full fit */
+        .hero-img {
+            position: absolute; right: -5%; bottom: 0; height: 110%; z-index: 1;
+            filter: grayscale(20%) brightness(80%);
+            mask-image: linear-gradient(to left, black 80%, transparent 100%);
+        }
+
+        /* Luxury Product Grid */
+        .shop { padding: 80px 5%; background: #000; }
+        .section-label { font-size: 0.7rem; letter-spacing: 4px; color: #555; margin-bottom: 40px; display: block; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; }
+        
+        .card {
+            height: 700px; background: #111; position: relative; overflow: hidden;
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 40px;
+        }
+        .card img { 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            object-fit: cover; opacity: 0.7; transition: 1s ease;
+        }
+        .card:hover img { transform: scale(1.1); opacity: 1; }
+        
+        .card-content { z-index: 2; position: relative; transform: translateY(20px); transition: 0.5s ease; }
+        .card:hover .card-content { transform: translateY(0); }
+        
+        .cat { font-size: 0.7rem; color: #888; margin-bottom: 5px; }
+        .card h3 { font-family: 'Syncopate', sans-serif; font-size: 1.4rem; margin-bottom: 20px; }
+        
+        .order-btn {
+            background: white; color: black; padding: 12px 25px; text-decoration: none;
+            font-weight: 800; font-size: 0.8rem; display: inline-block;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .hero-img { height: 80%; right: -20%; }
+            .card { height: 500px; }
+        }
+
+        .wa-button {
+            position: fixed; bottom: 20px; right: 20px; z-index: 1000;
+            background: #25D366; color: white; padding: 15px 25px;
+            border-radius: 50px; font-weight: bold; text-decoration: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5); font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">SS FANCY</div>
+        <div style="font-size: 0.7rem; color: #666;">EST. 2026 // GHARIPATAN</div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <p>New Season Drop</p>
+            <h1>URBAN<br>ELITE<br>WEAR.</h1>
+        </div>
+        <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?q=80&w=1974" class="hero-img" alt="Full Outfit">
+    </section>
+
+    <section class="shop">
+        <span class="section-label">SELECTED COLLECTIONS</span>
+        <div class="grid">
+            
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1000" alt="Full Set">
+                <div class="card-content">
+                    <p class="cat">TOP TO BOTTOM</p>
+                    <h3>PREMIUM TRACKSET</h3>
+                    <a href="https://wa.me/9779862238571?text=Order:PremiumTrackset" class="order-btn">WHATSAPP ORDER</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=1000" alt="Hoodie Set">
+                <div class="card-content">
+                    <p class="cat">STREETWEAR</p>
+                    <h3>OVERSIZED COMBO</h3>
+                    <a href="https://wa.me/9779862238571?text=Order:OversizedCombo" class="order-btn">WHATSAPP ORDER</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <a href="https://wa.me/9779862238571" class="wa-button">DIRECT WHATSAPP</a>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Parallax Effect for Hero Image
+        gsap.to(".hero-img", {
+            scrollTrigger: { trigger: ".hero", start: "top top", scrub: true },
+            x: 100, scale: 1.1
+        });
+
+        // Text reveal
+        gsap.from(".hero-text h1", {
+            duration: 1.5, y: 100, opacity: 0, ease: "power4.out"
+        });
+
+        // Card reveal on scroll
+        gsap.from(".card", {
+            scrollTrigger: { trigger: ".grid", start: "top 80%" },
+            y: 50, opacity: 0, stagger: 0.2, duration: 1
+        });
+    </script>
+</body>
+</html>
