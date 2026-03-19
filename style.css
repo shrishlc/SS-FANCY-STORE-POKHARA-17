@@ -1,0 +1,57 @@
+:root {
+    --bg: #050505;
+    --text: #ffffff;
+    --accent: #d4af37; /* Gold touch */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
+
+/* Sticky Premium Nav */
+.navbar {
+    position: fixed; top: 0; width: 100%; height: 90px;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0 8%; z-index: 100; transition: all 0.5s ease;
+}
+
+.logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; letter-spacing: 4px; }
+.nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
+.nav-links a { text-decoration: none; color: white; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+
+.wa-btn {
+    background: white; color: black !important;
+    padding: 10px 20px; border-radius: 50px; font-weight: 500;
+}
+
+/* Futuristic Hero */
+.hero {
+    height: 100vh; width: 100%;
+    background: url('https://images.unsplash.com/photo-1441997629053-755448b0f853?auto=format&fit=crop&w=1920&q=80') center/cover;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+}
+
+.hero-overlay { position: absolute; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); }
+.hero-content { z-index: 10; }
+.hero-content h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 8vw, 6rem); line-height: 1.1; margin-bottom: 20px; }
+
+/* Grid & Products */
+.collection { padding: 100px 8%; }
+.section-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 60px; text-align: center; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+
+.product-img { 
+    height: 500px; background-color: #111; 
+    transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    background-size: cover; background-position: center;
+}
+
+.product-card:hover .product-img { transform: scale(1.03); }
+.img-1 { background-image: url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800'); }
+.img-2 { background-image: url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800'); }
+
+.product-info { padding: 20px 0; border-bottom: 1px solid #333; }
+.order-link { color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-top: 10px; display: inline-block; }
+
+/* Footer */
+footer { padding: 80px 8%; text-align: center; background: #0a0a0a; border-top: 1px solid #111; }
+footer h2 { font-family: 'Playfair Display', serif; margin-bottom: 20px; }
