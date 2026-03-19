@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SS Fancy Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <img src="images/logo.png" class="logo">
+  <nav>
+    <a href="#">Men</a>
+    <a href="#">Women</a>
+    <a href="#">Kids</a>
+    <a href="#">Old</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>SS Fancy Store</h1>
+    <p>Trendy Fashion for Everyone in Pokhara</p>
+    <button>Explore Now</button>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="categories">
+  <h2>Shop Categories</h2>
+  <div class="grid">
+    <div class="card">Men Wear</div>
+    <div class="card">Women Wear</div>
+    <div class="card">Kids Collection</div>
+    <div class="card">Old Age Comfort</div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products">
+  <h2>Featured Products</h2>
+
+  <div class="product-grid">
+
+    <div class="product">
+      <img src="images/product1.jpg">
+      <h3>Classic Shirt</h3>
+      <p>Rs. 1200</p>
+      <button onclick="orderWhatsApp('Classic Shirt','Rs. 1200','images/product1.jpg')">
+        Order on WhatsApp
+      </button>
+    </div>
+
+    <div class="product">
+      <img src="images/product2.jpg">
+      <h3>Modern Dress</h3>
+      <p>Rs. 1800</p>
+      <button onclick="orderWhatsApp('Modern Dress','Rs. 1800','images/product2.jpg')">
+        Order on WhatsApp
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>📍 Pokhara, Gharipatan-17</p>
+  <p>📞 9862238571</p>
+  <p>© 2026 SS Fancy Store</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
